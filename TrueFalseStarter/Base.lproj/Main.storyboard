@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -14,11 +15,11 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J1V-MS-ECi">
-                                <rect key="frame" x="37" y="200" width="300" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J1V-MS-ECi">
+                                <rect key="frame" x="40" y="224" width="520" height="32"/>
                                 <color key="backgroundColor" red="0.047058823529411764" green="0.47450980392156861" blue="0.58823529411764708" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -27,8 +28,32 @@
                                     <action selector="checkAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pHS-se-fli"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AS4-HX-g9f">
-                                <rect key="frame" x="37" y="280" width="300" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K17-uy-MvB">
+                                <rect key="frame" x="40" y="361" width="520" height="32"/>
+                                <color key="backgroundColor" red="0.0" green="0.57647058823529407" blue="0.52941176470588236" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="D0Y-jR-JUh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Play Again"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="D0Y-jR-JUh"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="playAgain" destination="BYZ-38-t0r" eventType="touchUpInside" id="klz-B2-JAN"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sample Question" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I3V-ih-1Ky">
+                                <rect key="frame" x="235" y="50" width="130.5" height="19.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AS4-HX-g9f">
+                                <rect key="frame" x="40" y="286" width="520" height="32"/>
                                 <color key="backgroundColor" red="0.047058823530000002" green="0.47450980390000003" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -37,27 +62,56 @@
                                     <action selector="checkAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qfk-Z2-crr"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K17-uy-MvB">
-                                <rect key="frame" x="37" y="373" width="300" height="50"/>
-                                <color key="backgroundColor" red="0.0" green="0.57647058823529407" blue="0.52941176470588236" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="Play Again"/>
-                                <connections>
-                                    <action selector="playAgain" destination="BYZ-38-t0r" eventType="touchUpInside" id="klz-B2-JAN"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sample Question" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I3V-ih-1Ky">
-                                <rect key="frame" x="37" y="80" width="300" height="50"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.031372549019607843" green="0.16862745098039217" blue="0.24313725490196078" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="AS4-HX-g9f" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="17" id="1A6-5U-y0w"/>
+                            <constraint firstItem="J1V-MS-ECi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2a8-Jb-zYR"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="K17-uy-MvB" secondAttribute="trailing" constant="20" id="3pI-EH-vNn"/>
+                            <constraint firstItem="J1V-MS-ECi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="17" id="6GJ-BV-Ycc"/>
+                            <constraint firstItem="I3V-ih-1Ky" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7dx-U3-IyL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="K17-uy-MvB" secondAttribute="trailing" constant="243" id="Ei1-a5-7f5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="I3V-ih-1Ky" secondAttribute="trailing" constant="243" id="JnM-sT-fJG"/>
+                            <constraint firstItem="I3V-ih-1Ky" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="60" id="KOv-tn-3ln"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="K17-uy-MvB" secondAttribute="bottom" constant="177" id="NRO-x3-CWG"/>
+                            <constraint firstItem="J1V-MS-ECi" firstAttribute="top" secondItem="I3V-ih-1Ky" secondAttribute="bottom" constant="154.5" id="Ozz-lp-lxZ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="AS4-HX-g9f" secondAttribute="trailing" constant="20" id="Q5E-FZ-Rfq"/>
+                            <constraint firstItem="J1V-MS-ECi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="Syc-SH-g3f"/>
+                            <constraint firstItem="K17-uy-MvB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="VXL-zR-mB8"/>
+                            <constraint firstItem="I3V-ih-1Ky" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="17" id="Wou-Bj-bWz"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="K17-uy-MvB" secondAttribute="bottom" constant="150" id="Y1h-mw-fzw"/>
+                            <constraint firstItem="AS4-HX-g9f" firstAttribute="top" secondItem="J1V-MS-ECi" secondAttribute="bottom" constant="30" id="ZrA-Ho-MIU"/>
+                            <constraint firstItem="K17-uy-MvB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="coM-Ug-Fcv"/>
+                            <constraint firstItem="AS4-HX-g9f" firstAttribute="top" secondItem="J1V-MS-ECi" secondAttribute="bottom" constant="30" id="ctX-rm-mLG"/>
+                            <constraint firstItem="K17-uy-MvB" firstAttribute="top" secondItem="AS4-HX-g9f" secondAttribute="bottom" constant="43" id="hJ0-B8-TEz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="J1V-MS-ECi" secondAttribute="trailing" constant="20" id="lxk-Wu-RIY"/>
+                            <constraint firstItem="I3V-ih-1Ky" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="ped-je-6ic"/>
+                            <constraint firstItem="K17-uy-MvB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="17" id="qTK-bL-aV4"/>
+                            <constraint firstItem="AS4-HX-g9f" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="s4t-uP-l8h"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="AS4-HX-g9f" secondAttribute="trailing" constant="243" id="tRV-Io-ch1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="J1V-MS-ECi" secondAttribute="trailing" constant="243" id="uYg-MU-YKh"/>
+                            <constraint firstItem="AS4-HX-g9f" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="ypk-00-Esz"/>
+                            <constraint firstItem="K17-uy-MvB" firstAttribute="top" secondItem="AS4-HX-g9f" secondAttribute="bottom" constant="43" id="zuS-b7-ytZ"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="JnM-sT-fJG"/>
+                                <exclude reference="KOv-tn-3ln"/>
+                                <exclude reference="Wou-Bj-bWz"/>
+                                <exclude reference="6GJ-BV-Ycc"/>
+                                <exclude reference="uYg-MU-YKh"/>
+                                <exclude reference="1A6-5U-y0w"/>
+                                <exclude reference="ctX-rm-mLG"/>
+                                <exclude reference="tRV-Io-ch1"/>
+                                <exclude reference="Ei1-a5-7f5"/>
+                                <exclude reference="qTK-bL-aV4"/>
+                                <exclude reference="zuS-b7-ytZ"/>
+                                <exclude reference="NRO-x3-CWG"/>
+                                <exclude reference="Y1h-mw-fzw"/>
+                            </mask>
+                        </variation>
                     </view>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="falseButton" destination="AS4-HX-g9f" id="Xfj-Ws-1ey"/>
                         <outlet property="playAgainButton" destination="K17-uy-MvB" id="0Bx-Cm-ye0"/>
