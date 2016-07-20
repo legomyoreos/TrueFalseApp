@@ -39,9 +39,15 @@ func displayQuestion() {
     indexOfSelectedQuestion = GKRandomSource.sharedRandom().nextIntWithUpperBound(questionsModel.question.count)
     let questionDictionary = questionsModel.question[indexOfSelectedQuestion]
     let questionField = questionDictionary["Question"]
+    let buttonOneText = "\(questionDictionary["OptionOne"]!)"
 }
 
+//optionOneButton.setTitle("\(questionDictionary["OptionOne"])", forState: .Normal)
+
 displayQuestion()
+
+let selectedQuestionDict = questionsModel.question[indexOfSelectedQuestion]
+let correctAnswer = selectedQuestionDict["Answer"]
 
 
 
