@@ -12,13 +12,15 @@ import AudioToolbox
 
 class ViewController: UIViewController {
     
-    let questionsPerRound = 4
+    let questionsModel = QuestionsModel()
+    let questionsPerRound = 10
     var questionsAsked = 0
     var correctQuestions = 0
     var indexOfSelectedQuestion: Int = 0
-    var usedQuestions = []
+    var usedQuestions: NSMutableArray = []
     
-    let questionsModel = QuestionsModel()
+    
+
     
     var gameSound: SystemSoundID = 0
     
@@ -82,7 +84,8 @@ class ViewController: UIViewController {
         } else {
             questionField.text = "Sorry, wrong answer!"
         }
-        
+
+        usedQuestions.addObject(selectedQuestionDict)
         loadNextRoundWithDelay(seconds: 2)
     }
 
@@ -105,6 +108,7 @@ class ViewController: UIViewController {
         
         questionsAsked = 0
         correctQuestions = 0
+        usedQuestions = []
         nextRound()
     }
     
